@@ -52,13 +52,12 @@
 
 #include <cdio/cdio.h>
 #include <cdio/iso9660.h>
-
-#define print_vd_info(title, fn)	  \
-  if (fn(p_iso, &psz_str)) {		  \
-    printf(title ": %s\n", psz_str);	  \
-  }					  \
-  free(psz_str);			  \
-  psz_str = NULL;
+#define print_vd_info(title, fn)
+	if (fn(p_iso, &psz_str)) {
+	printf(title ": %s\n", psz_str);
+	}					  \
+	free(psz_str);			  \
+	psz_str = NULL;
 
 
 int main(int argc, const char *argv[])
@@ -77,7 +76,7 @@ int main(int argc, const char *argv[])
 	p_iso = iso9660_open (psz_fname);
 
 	if (NULL == p_iso) {
-		fprintf(stderr, "Sorry, couldn't open %s as an ISO-9660 image\n", psz_fname);
+		printf(stderr, "Sorry, couldn't open %s as an ISO-9660 image\n", psz_fname);
 		return 1;
 	}
 

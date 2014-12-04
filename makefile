@@ -2,9 +2,9 @@ CC=gcc
 
 CFLAGS=-W -Wall
 
-all: isofile2.c  isofuzzy.c  isolsn.c isofile.c   isolist.c   isorr.c
+all: isolist
 
 %: %.c
 	$(CC) $(CFLAGS) -o $@ $<
 clean:
-	$(RM) isofile2.c  isofuzzy.c  isolsn.c isofile.c   isolist.c   isorr.c
+	$(RM) isolist

@@ -43,8 +43,6 @@ int main(int argc, const char *argv[])
 
 	if (argc > 1)
 		psz_fname = argv[1];
-	else
-		psz_fname = ISO9660_IMAGE;
 
 	p_iso = iso9660_open (psz_fname);
 

@@ -41,8 +41,8 @@ int main(int argc, const char *argv[])
 	char const *psz_fname;
 	iso9660_t *p_iso;
 
-	if (argc > 1)
-		psz_fname = argv[1];
+	if (argc > 2)
+		psz_fname = argv[2];
 
 	p_iso = iso9660_open (psz_fname);
 

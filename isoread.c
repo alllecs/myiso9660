@@ -53,9 +53,6 @@ int main(int argc, char *argv[])
 	n = printf("%d\n", buf);
 	dump_buffer(&buf, fileLen);
 
-	if (n < 3000000)
-		printf("error");
-
 	fclose(fp);
 	return 0;
 }

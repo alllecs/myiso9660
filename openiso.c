@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
 	if (p_iso == NULL) {
 		perror("Ошибка при работе с фалом\n");
 		return 1;
-	} else
-		return 0;
+	}
 
 	iso9660_close(p_iso);
+	return 0;
 }

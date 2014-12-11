@@ -10,8 +10,8 @@ int dump_buffer(void *buf, int buf_size)
 {
         int i;
 
-        for(i = 0; i < buf_size; ++i)
-                printf("%c", ((char *)buf) [i]);
+        for (i = 0; i < buf_size; ++i)
+                printf("%c", ((char *) buf) [i]);
 
         return 0;
 }
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 
 	if (buf == NULL) {
 		printf("Memory allocation error!");
-			fclose(fp);
+		fclose(fp);
 		return 4;
 	}
 

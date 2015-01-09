@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
 	FILE *fp;
 	char buf[MAX_SIZE];
 	unsigned long fileLen;
-	unsigned k;
 
 	if (argc < 2) {
 		printf("Error. No find file.\n");
@@ -39,8 +38,8 @@ int main(int argc, char *argv[])
 	fileLen = ftell(fp);
 	fseek(fp, 0, SEEK_SET);
 
-	if (buf[k] == (char *)malloc(MAX_SIZE *fileLen))
-	printf("%c", buf[k]);
+	if (buf[MAX_SIZE] == (char)malloc(MAX_SIZE *fileLen))
+	printf("%c", buf[MAX_SIZE]);
 
 	if (buf == NULL) {
 		printf("Memory allocation error!");
